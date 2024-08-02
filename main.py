@@ -195,7 +195,9 @@ def main():
                 st.success("Done")
 
         st.info("This chatbot uses Google Generative AI model for conversational responses.")
+        st.info("This is not always accurate")
         st.info("Created By Pranav Lejith(Amphibiar)")
+        
 
     user_question = st.text_input("Ask a Question from the PDF Files")
 
