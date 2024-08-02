@@ -95,15 +95,9 @@ subjects = {
     }
 }
 
-# To maintain chat history and dropdown selections
+# To maintain chat history
 if 'messages' not in st.session_state:
     st.session_state.messages = []
-
-if 'selected_subject' not in st.session_state:
-    st.session_state.selected_subject = list(subjects.keys())[0]  # Default to the first subject
-
-if 'selected_chapter' not in st.session_state:
-    st.session_state.selected_chapter = list(subjects[st.session_state.selected_subject].keys())[0]  # Default to the first chapter
 
 def get_pdf_text(pdf_path):
     text = ""
@@ -185,15 +179,11 @@ def main():
         st.title("Menu:")
         
         # Subject selection
-        subjects_list = list(subjects.keys())
-        subject_choice = st.selectbox("Choose a Subject", options=subjects_list, index=subjects_list.index(st.session_state.selected_subject))
-        st.session_state.selected_subject = subject_choice
+        subject_choice = st.selectbox("Choose a Subject", options=list(subjects.keys()))
         
         # Chapter selection based on the selected subject
         chapters = subjects[subject_choice]
-        chapters_list = list(chapters.keys())
-        chapter_choice = st.selectbox("Choose a Chapter", options=chapters_list, index=chapters_list.index(st.session_state.selected_chapter))
-        st.session_state.selected_chapter = chapter_choice
+        chapter_choice = st.selectbox("Choose a Chapter", options=list(chapters.keys()))
         
         # Process Chapter button
         if st.button("Process Chapter", key="process_chapter"):
