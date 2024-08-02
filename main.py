@@ -185,12 +185,14 @@ def main():
         st.title("Menu:")
         
         # Subject selection
-        subject_choice = st.selectbox("Choose a Subject", options=list(subjects.keys()), index=list(subjects.keys()).index(st.session_state.selected_subject))
+        subjects_list = list(subjects.keys())
+        subject_choice = st.selectbox("Choose a Subject", options=subjects_list, index=subjects_list.index(st.session_state.selected_subject))
         st.session_state.selected_subject = subject_choice
         
         # Chapter selection based on the selected subject
         chapters = subjects[subject_choice]
-        chapter_choice = st.selectbox("Choose a Chapter", options=list(chapters.keys()), index=list(chapters.keys()).index(st.session_state.selected_chapter))
+        chapters_list = list(chapters.keys())
+        chapter_choice = st.selectbox("Choose a Chapter", options=chapters_list, index=chapters_list.index(st.session_state.selected_chapter))
         st.session_state.selected_chapter = chapter_choice
         
         # Process Chapter button
