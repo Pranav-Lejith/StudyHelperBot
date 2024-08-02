@@ -36,8 +36,8 @@ subjects = {
         "Chapter 5 - The Snake and the Mirror": "chapter5.pdf",
         "Chapter 6 - My Childhood": "chapter6.pdf",
         "Chapter 7 - Packing": "chapter7.pdf",
-        "Chapter 8 - The Little House": "chapter8.pdf",
-        "Chapter 9 - A Truly Beautiful Mind": "chapter9.pdf"
+        "Chapter 8 - Kathmandu": "chapter8.pdf",
+        "Chapter 9 - If I were you": "chapter9.pdf"
     },
     "English_moments": {
         "Chapter 1 - The Lost Child": "chapter1.pdf",
@@ -45,18 +45,18 @@ subjects = {
         "Chapter 3 - Iswaran the Storyteller": "chapter3.pdf",
         "Chapter 4 - In the Kingdom of Fools": "chapter4.pdf",
         "Chapter 5 - The Happy Prince": "chapter5.pdf",
-        "Chapter 6 - A House is Not a Home": "chapter6.pdf",
-        "Chapter 7 - The Beggar": "chapter7.pdf",
-        "Chapter 8 - The Road Not Taken": "chapter8.pdf",
-        "Chapter 9 - The Last Leaf": "chapter9.pdf"
+        "Chapter 6 - Weathering the storm in Erasma": "chapter6.pdf",
+        "Chapter 7 - The Last Leaf": "chapter7.pdf",
+        "Chapter 8 - A house is not a Home": "chapter8.pdf",
+        "Chapter 9 - The Beggar": "chapter9.pdf"
     },
     "Geography": {
-        "Chapter 1 - Resources and Development": "chapter1.pdf",
-        "Chapter 2 - Forest and Wildlife Resources": "chapter2.pdf",
-        "Chapter 3 - Water Resources": "chapter3.pdf",
-        "Chapter 4 - Agriculture": "chapter4.pdf",
-        "Chapter 5 - Mineral and Energy Resources": "chapter5.pdf",
-        "Chapter 6 - Manufacturing Industries": "chapter6.pdf"
+        "Chapter 1 - India - Size and Location": "chapter1.pdf",
+        "Chapter 2 - India - Physical Features": "chapter2.pdf",
+        "Chapter 3 - Drainage": "chapter3.pdf",
+        "Chapter 4 - Climate": "chapter4.pdf",
+        "Chapter 5 - Natural Vegetation and Wildlife": "chapter5.pdf",
+        "Chapter 6 - Population": "chapter6.pdf"
     },
     "History": {
         "Chapter 1 - The French Revolution": "chapter1.pdf",
@@ -67,31 +67,31 @@ subjects = {
     },
     "Maths": {
         "Chapter 1 - Number Systems": "chapter1.pdf",
-        "Chapter 2 - Algebra": "chapter2.pdf",
+        "Chapter 2 - Polynomials": "chapter2.pdf",
         "Chapter 3 - Coordinate Geometry": "chapter3.pdf",
-        "Chapter 4 - Geometry": "chapter4.pdf",
-        "Chapter 5 - Mensuration": "chapter5.pdf",
-        "Chapter 6 - Statistics": "chapter6.pdf",
-        "Chapter 7 - Probability": "chapter7.pdf",
-        "Chapter 8 - Quadratic Equations": "chapter8.pdf",
-        "Chapter 9 - Arithmetic Progressions": "chapter9.pdf",
-        "Chapter 10 - Circles": "chapter10.pdf",
-        "Chapter 11 - Constructions": "chapter11.pdf",
-        "Chapter 12 - Areas Related to Circles": "chapter12.pdf"
+        "Chapter 4 - Linear equations in two variables": "chapter4.pdf",
+        "Chapter 5 - Euclid's Geometry": "chapter5.pdf",
+        "Chapter 6 - Lines and Angles": "chapter6.pdf",
+        "Chapter 7 - Triangles": "chapter7.pdf",
+        "Chapter 8 - Quadrilaterals": "chapter8.pdf",
+        "Chapter 9 - Circles": "chapter9.pdf",
+        "Chapter 10 - Heron's Formula": "chapter10.pdf",
+        "Chapter 11 - Surface Areas and Volumes": "chapter11.pdf",
+        "Chapter 12 - Statistics": "chapter12.pdf"
     },
     "Science": {
         "Chapter 1 - Matter in Our Surroundings": "chapter1.pdf",
         "Chapter 2 - Is Matter Around Us Pure": "chapter2.pdf",
         "Chapter 3 - Atoms and Molecules": "chapter3.pdf",
         "Chapter 4 - Structure of the Atom": "chapter4.pdf",
-        "Chapter 5 - Chemical Reactions and Equations": "chapter5.pdf",
-        "Chapter 6 - Acids, Bases and Salts": "chapter6.pdf",
-        "Chapter 7 - Metals and Non-Metals": "chapter7.pdf",
-        "Chapter 8 - Carbon and Its Compounds": "chapter8.pdf",
-        "Chapter 9 - Periodic Classification of Elements": "chapter9.pdf",
-        "Chapter 10 - Light": "chapter10.pdf",
-        "Chapter 11 - Human Eye and Colourful World": "chapter11.pdf",
-        "Chapter 12 - Electricity": "chapter12.pdf"
+        "Chapter 5 - The Fundamental Unit of Life": "chapter5.pdf",
+        "Chapter 6 - Tissues": "chapter6.pdf",
+        "Chapter 7 - Motion": "chapter7.pdf",
+        "Chapter 8 - Force and Laws of Motion": "chapter8.pdf",
+        "Chapter 9 - Gravitation": "chapter9.pdf",
+        "Chapter 10 - Work and Energy": "chapter10.pdf",
+        "Chapter 11 - Sound": "chapter11.pdf",
+        "Chapter 12 - Improvement in Food Resources": "chapter12.pdf"
     }
 }
 
