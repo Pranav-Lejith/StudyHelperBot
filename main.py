@@ -118,9 +118,9 @@ def get_vector_store(text_chunks):
 
 def get_conversational_chain():
     prompt_template = """
-    You are a historian with expertise in answering questions related to history. Answer the question as detailed as possible 
-    from the provided context. Make sure to provide all the details. If the answer is not in the provided context, just say, 
-    "The answer is not available in the context," and do not provide incorrect information.
+    You are an expert in various subjects including History, Geography, English, Economics, Maths, and Science. Answer the 
+    question as detailed as possible from the provided context. Make sure to provide all the details. If the answer is not 
+    in the provided context, just say, "The answer is not available in the context," and do not provide incorrect information.
 
     Context:\n {context}?\n
     Question:\n {question}\n
