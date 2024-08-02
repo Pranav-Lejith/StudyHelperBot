@@ -176,34 +176,6 @@ def main():
     st.header("PDF Reader")
 
     with st.sidebar:
-        st.title("Menu:")
-        
-        # Explanation of how the project works
-        st.subheader("How It Works")
-        st.write("""
-        This application allows you to interact with PDF files from various subjects and obtain detailed answers to your questions based on the content of those PDFs.
-
-        **1. Subject and Chapter Selection:**
-        - Choose a subject from the dropdown menu.
-        - Select a chapter from the chosen subject.
-
-        **2. Processing a Chapter:**
-        - Click on the "Process Chapter" button to process the selected chapter.
-        - The application will read the selected PDF, split the text into manageable chunks, and index these chunks for efficient querying.
-
-        **3. Asking Questions:**
-        - Enter your question in the text input box.
-        - Click "Submit Question" to get an answer based on the content of the processed PDFs.
-        - The application uses Google Generative AI to generate responses based on the indexed content.
-
-        **4. Chat History:**
-        - Your questions and the responses from the AI are displayed in a chat-like interface.
-        - This allows you to keep track of your interactions and easily refer back to previous answers.
-
-        **Note:**
-        - The AI model provides responses based on the context of the processed PDFs. The accuracy of the responses depends on the quality and completeness of the PDF content.
-        """)
-
         st.title("Choose a Subject")
         
         # Subject selection
@@ -226,6 +198,27 @@ def main():
         st.info("This is not always accurate")
         st.info("Created By Pranav Lejith(Amphibiar)")
         
+        # Explanation
+        st.subheader("How It Works")
+        st.write("""
+        **1. PDF Processing:**
+        - Select a subject and chapter from the dropdown menus.
+        - Click on "Process Chapter" to extract and index the text from the PDF files.
+        - The text is chunked and converted into vector representations for efficient search.
+
+        **2. Asking Questions:**
+        - Enter your question related to the processed PDF content in the text input field.
+        - Click "Submit Question" to get an answer based on the content of the processed PDFs.
+        - The application uses Google Generative AI to generate responses based on the indexed content.
+
+        **3. Chat History:**
+        - Your questions and the responses from the AI are displayed in a chat-like interface.
+        - This allows you to keep track of your interactions and easily refer back to previous answers.
+
+        **Note:**
+        - The AI model provides responses based on the context of the processed PDFs. The accuracy of the responses depends on the quality and completeness of the PDF content.
+        """)
+
     user_question = st.text_input("Ask a Question from the PDF Files")
 
     if st.button("Submit Question", key="submit_question"):
