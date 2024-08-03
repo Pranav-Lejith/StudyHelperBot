@@ -225,7 +225,7 @@ def main():
     """)
 
     st.sidebar.info("**Created by Pranav Lejith (Amphibiar)**")
-    stsidebar.info("**This bot answers questions from all the 9th standard textbooks except L2 and Artificial Intelligence**")
+    st.sidebar.info("**This bot answers questions from all the 9th standard textbooks except L2 and Artificial Intelligence**")
 
     font_size = st.sidebar.slider("Font Size", min_value=10, max_value=30, value=16)
 
