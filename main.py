@@ -186,7 +186,7 @@ def display_chat():
 def main():
     st.set_page_config(page_title="PDF Reader", page_icon=":book:", layout="wide")
 
-    st.sidebar.header("📚 PDF Reader(Answers questions form 9th std textbooks)")
+    st.sidebar.header("📚 PDF Reader")
     st.sidebar.markdown("""
     ### Choose an Option
     """)
@@ -224,13 +224,14 @@ def main():
        All interactions, including your questions and the system's responses, are displayed in the chat interface for easy reference.
     """)
 
-    st.sidebar.markdown("**Created by Pranav Lejith (Amphibiar)**")
+    st.sidebar.info("**Created by Pranav Lejith (Amphibiar)**")
+    stsidebar.info("**This bot answers questions from all the 9th standard textbooks except L2 and Artificial Intelligence**")
 
     font_size = st.sidebar.slider("Font Size", min_value=10, max_value=30, value=16)
 
     st.session_state.font_size = font_size
 
-    st.title("PDF Reader")
+    st.title("PDF Reader(Answers questions from 9th Standard Textbooks)")
 
     user_question = st.text_input("Enter your question:")
 
