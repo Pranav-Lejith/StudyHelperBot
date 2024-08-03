@@ -186,7 +186,7 @@ def display_chat():
 def main():
     st.set_page_config(page_title="PDF Reader", page_icon=":book:", layout="wide")
 
-    st.sidebar.header("📚 PDF Reader")
+    st.sidebar.header("📚 PDF Reader(Answers questions form 9th std textbooks)")
     st.sidebar.markdown("""
     ### Choose an Option
     """)
