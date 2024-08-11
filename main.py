@@ -226,8 +226,8 @@ def main():
 
     st.sidebar.info("**Created by Pranav Lejith (Amphibiar)**")
     st.sidebar.info("**This bot answers questions from all the 9th standard textbooks except L2 and Artificial Intelligence**")
-    st.sidebar.title("**NOTE**")
-    st.sidebar.info("**This model is highly unstable and will not always prodice correct results. The bot may sometimes give the result as 'The answer to the question is not give in the given question. This is beacause the answer is not found in the particular PDF. But sometimes , even though the answer is given, the bot may not give the result.**")
+    st.sidebar.title("**Note📝**")
+    st.sidebar.info("**This model is highly unstable and will not always produce correct results. The bot may sometimes give the result as 'The answer to the question is not give in the given question. This is beacause the answer is not found in the particular PDF. But sometimes , even though the answer is given, the bot may not give the result.**")
 
 
     font_size = st.sidebar.slider("Font Size", min_value=10, max_value=30, value=16)
