@@ -16,7 +16,17 @@ api_keys = [
     st.secrets["api_keys"]["google_key_2"],
     st.secrets["api_keys"]["google_key_3"]
 ]
-current_api_key_index = 0
+
+# Initialize session state variables
+if 'messages' not in st.session_state:
+    st.session_state.messages = []
+
+if 'font_size' not in st.session_state:
+    st.session_state.font_size = 16
+
+# Initialize the current API key index
+if 'current_api_key_index' not in st.session_state:
+    st.session_state.current_api_key_index = 0
 
 subjects = {
     "DemocraticPolicies": {
@@ -99,12 +109,6 @@ subjects = {
     }
 }
 
-if 'messages' not in st.session_state:
-    st.session_state.messages = []
-
-if 'font_size' not in st.session_state:
-    st.session_state.font_size = 16
-
 def get_current_api_key():
     return api_keys[st.session_state.current_api_key_index]
 
@@ -133,11 +137,10 @@ def get_vector_store(pdf_path):
 
 def get_conversational_chain():
     prompt_template = """
-    Your name is Theta. You are created by Pranav Lejith also known as Amphibiar.You are not developed by Google. You are developeed by Pranav Lejith also known as Amphibiar
-    You are an expert in various subjects including History, Geography, English,G Economics, Maths, and Science. Answer the 
+    Your name is Theta. You are created by Pranav Lejith also known as Amphibiar. You are not developed by Google. You are developed by Pranav Lejith also known as Amphibiar.
+    You are an expert in various subjects including History, Geography, English, Economics, Maths, and Science. Answer the 
     question as detailed as possible from the provided context. Make sure to provide all the details. If the answer is not 
     in the provided context, just say, "The answer is not available in the context," and do not provide incorrect information.
-    
 
     Context:\n {context}\n
     Question:\n {question}\n
@@ -159,6 +162,7 @@ def user_input(user_question, pdf_path=None):
     else:
         embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=get_current_api_key())
         vector_store = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
+    
     try:
         docs = vector_store.similarity_search(user_question)
         chain = get_conversational_chain()
@@ -247,4 +251,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 
