@@ -10,7 +10,14 @@ import os
 import requests
 from requests.exceptions import HTTPError
 
-# Define subjects dictionary
+# Fetch API keys from Streamlit secrets
+api_keys = [
+    st.secrets["api_keys"]["google_key_1"],
+    st.secrets["api_keys"]["google_key_2"],
+    st.secrets["api_keys"]["google_key_3"]
+]
+current_api_key_index = 0
+
 subjects = {
     "DemocraticPolicies": {
         "Chapter 1 - What is democracy? Why democracy?": "chapter1.pdf",
@@ -92,17 +99,6 @@ subjects = {
     }
 }
 
-# Fetch API keys from Streamlit secrets
-api_keys = [
-    st.secrets["api_keys"]["google_key_1"],
-    st.secrets["api_keys"]["google_key_2"],
-    st.secrets["api_keys"]["google_key_3"]
-]
-
-# Initialize session state attributes if they don't exist
-if 'current_api_key_index' not in st.session_state:
-    st.session_state.current_api_key_index = 0
-
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 
@@ -137,6 +133,7 @@ def get_vector_store(pdf_path):
 
 def get_conversational_chain():
     prompt_template = """
+    Your name is Theta. You are created by Pranav Lejith also known as Amphibiar
     You are an expert in various subjects including History, Geography, English, Economics, Maths, and Science. Answer the 
     question as detailed as possible from the provided context. Make sure to provide all the details. If the answer is not 
     in the provided context, just say, "The answer is not available in the context," and do not provide incorrect information.
@@ -224,17 +221,13 @@ def main():
        All interactions, including your questions and the system's responses, are displayed in the chat interface for easy reference.
     """)
 
-    st.sidebar.info("**Created by Pranav Lejith (Amphibiar)**")
-    st.sidebar.info("**This bot answers questions from all the 9th standard textbooks except L2 and Artificial Intelligence**")
-    st.sidebar.title("**Note📝**")
-    st.sidebar.info("**This model is highly unstable and will not always produce correct results. The bot may sometimes give the result as 'The answer to the question is not give in the given question. This is beacause the answer is not found in the particular PDF. But sometimes , even though the answer is given, the bot may not give the result.**")
-
+    st.sidebar.markdown("**Created by Pranav Lejith (Amphibiar)**")
 
     font_size = st.sidebar.slider("Font Size", min_value=10, max_value=30, value=16)
 
     st.session_state.font_size = font_size
 
-    st.title("PDF Reader(Answers questions from 9th Standard Textbooks)")
+    st.title("PDF Reader")
 
     user_question = st.text_input("Enter your question:")
 
@@ -253,3 +246,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
